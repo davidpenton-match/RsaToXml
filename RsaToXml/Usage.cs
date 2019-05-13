@@ -16,7 +16,13 @@ Options:
 pem-file:
   Path to the pem file to convert
 next-pem-file
-  Path to the next pem file to convert"
+  Path to the next pem file to convert
+
+Sample of how to generate PEM files:
+
+openssl genrsa -out private.pem 2048
+openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+"
 		;
 
 		public static int Display()
